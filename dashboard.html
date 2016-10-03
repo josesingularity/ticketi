@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Creative - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/creative.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body id="page-top">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+            	<img class="navbar-brand" src="img/ticketi.webp">
+                <a class="navbar-brand" href="#page-top">Ticketi</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                     <a href="#" data-toggle="modal" data-target="#settings">Settings</a>
+                </li>
+                <li>
+					 <a href="#" data-toggle="modal" data-target="#inviteFriends">Invite your friends now</a>
+                </li>
+            </ul>
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+
+<script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+var data1 = google.visualization.arrayToDataTable([['Status', 'Percentage'], ['Opened', 13], ['Closed', 29]]);
+var data2 = google.visualization.arrayToDataTable([['Status', 'Percentage'], ['Opened', 23], ['Closed', 39]]);
+var data3 = google.visualization.arrayToDataTable([['Status', 'Percentage'], ['Opened', 63], ['Closed', 59]]);
+var data4 = google.visualization.arrayToDataTable([['Status', 'Percentage'], ['Opened', 43], ['Closed', 89]]);
+var data5 = google.visualization.arrayToDataTable([['Status', 'Percentage'], ['Opened', 33], ['Closed', 29]]);
+var data6 = google.visualization.arrayToDataTable([['Status', 'Percentage'], ['Opened', 73], ['Closed', 49]]);
+
+        var options = {
+        	legend: 'none' ,
+          is3D: true,
+          slices: {
+            0: { color: '#6776C0' },
+            1: { color: '#F365B1' }
+          }
+        };
+
+var chart1 = new google.visualization.PieChart(document.getElementById('piechart1'));
+chart1.draw(data1, options);
+
+var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+chart2.draw(data2, options);
+
+var chart3 = new google.visualization.PieChart(document.getElementById('piechart3'));
+chart3.draw(data3, options);
+
+var chart4 = new google.visualization.PieChart(document.getElementById('piechart4'));
+chart4.draw(data4, options);
+
+var chart5 = new google.visualization.PieChart(document.getElementById('piechart5'));
+chart5.draw(data5, options);
+
+var chart6 = new google.visualization.PieChart(document.getElementById('piechart6'));
+chart6.draw(data6, options);
+
+}
+</script>
+
+
+<section class="mb80 mt20">
+
+<script type="text/javascript">
+function loadSettingsModal(){
+	$('#settings').modal('show');
+}
+</script>
+
+
+<!-- Button trigger modal -->
+<div class="row">
+  <div class="container">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4 col-md-offset-4">
+       </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal: Settings -->
+<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Settings</h4>
+      </div>
+      <div class="modal-body">
+      <h4 class="modal-title" id="myModalLabel">User</h4>
+      <p><strong>Name</strong>: John Doe<br />
+      	<strong>Email</strong>: john@yourcompany.com
+      </p>
+        <form>
+          <h4>Email Delivery Options</h4>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Frequency</label><br>
+            <label class="radio-inline active">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked=""> Weekly
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Monthly
+            </label>
+
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email Addresses</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Adresses">
+          </div>
+
+          <h4>Integrations</h4>
+
+        <div class="form-group">
+            
+<div class="row"> 
+  <div class="col-md-4">
+  <div class="integration-sum m10">
+  	<img src="img/zendesk.png"></div>
+  	<button type="button" class="btn btn-success center-block">Connected</button>
+  </div>
+  <div class="col-md-4"><div class="integration-sum m10"><img src="img/desk.png"></div>
+  <button type="button" class="btn btn-info center-block">Connect</button></div>
+  <div class="col-md-4"><div class="integration-sum m10"><img src="img/helpscout.png"></div>
+  <button type="button" class="btn btn-default btn-disabled center-block">Coming Soon</button></div>
+</div>
+
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Invite Your Friends -->
+<div class="modal fade" id="inviteFriends" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Send your friends a 3 months free trial</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Emails:</label>
+            <input type="text" class="form-control" id="recipient-name">
+            <p class="text-muted small">If you want to send it to different emails, separate them by comma.</p>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Send Invites</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+     <div id="services" class="mt40">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Weekly summary</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-md-6 text-center col-md-offset-3">
+                    <div class="service-box">
+                        <i class="fa fa-2x fa-tasks text-primary sr-icons"></i>
+                        <h3>1324 tickets</h3>
+                        <p class="text-muted">&uarr; 17% from last week</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-2x fa-tag text-primary sr-icons"></i>
+                        <h3>34 categories</h3>
+                        <p class="text-muted">&uarr; 5% from last week</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+
+
+
+     <div id="services" class="mt40">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Common Problems</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+
+            <div id="myCarousel" class="carousel">
+             <!-- Carousel items -->
+             <div class="carousel-inner">
+               <div class="active item">
+
+                <div class="row">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <h4><strong>billing (20%)</strong></h4>
+                    <div id="piechart1" class="chart"></div>
+                    <p class="text-muted small">&uarr; 15% from last week</p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <h4><strong>account setup (14%)</strong></h4>
+                    <div id="piechart2" class="chart"></div>
+                    <p class="text-muted small">&uarr; 31% from last week</p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <h4><strong>checkout (9%)</strong></h4>
+                    <div id="piechart3" class="chart"></div>
+                    <p class="text-muted small">&darr; 1% from last week</p>
+                </div>
+            </div>
+
+
+               </div>
+               <div class="item">
+
+
+                     <div class="row">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <h4><strong>extend trial (7%)</strong></h4>
+                    <div id="piechart4" class="chart"></div>
+                    <p class="text-muted small">&darr; 2% from last week</p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <h4><strong>login (5%)</strong></h4>
+                    <div id="piechart5" class="chart"></div>
+                    <p class="text-muted small">&uarr; 10% from last week</p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <h4><strong>invite members (3%)</strong></h4>
+                    <div id="piechart6" class="chart"></div>
+                    <p class="text-muted small">&darr; 5% from last week</p>
+                </div>
+            </div>
+
+               </div>
+           </div>
+           <!-- Carousel nav -->
+           <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+           <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+       </div>
+
+        </div>
+
+    </div>
+
+     <section id="services mb20">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Trending this week</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+
+     
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-1 col-md-6 col-md-offset-1 text-center">
+                    <div class="service-box">
+                        <h3><span class="negative"><strong>&uarr;UP</strong></span></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <h4><strong>account setup</strong></h4>
+                        <p class="text-muted small">&uarr; 31% from last week</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                         <h4><strong>billing</strong></h4>
+                        <p class="text-muted small">&uarr; 15% from last week</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                         <h4><strong>login</strong></h4>
+                        <p class="text-muted small">&uarr; 10% from last week</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row mt40">
+                <div class="col-lg-1 col-md-6 col-md-offset-1 text-center">
+                    <div class="service-box">
+                        <h3><span class="positive"><strong>&darr;DOWN</strong></span></h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <h4><strong>invite members</strong></h4>
+                        <p class="text-muted small">&darr; 5% from last week</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                         <h4><strong>extend trial</strong></h4>
+                        <p class="text-muted small">&darr; 2% from last week</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                         <h4><strong>checkout/strong></h4>
+                        <p class="text-muted small">&darr; 1% from last week</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+
+</body>
+
+</html>
